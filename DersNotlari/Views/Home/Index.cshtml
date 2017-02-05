@@ -1,0 +1,47 @@
+﻿@model List<DersNotlari.Models.Ogrenci>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Ad</td>
+                    <td>Soyad</td>
+                    <td>No</td>
+                    <td>Ders Adi</td>
+                    <td>Ders Not</td>
+
+                </tr>
+            </thead>
+            
+            <tbody>
+                @foreach (DersNotlari.Models.Ogrenci _ogrenci in Model)
+                {
+                    <tr>
+                        <td>@_ogrenci.Ad</td>
+                        <td>@_ogrenci.Soyad</td>
+                        <td>@_ogrenci.No</td>
+                        <td>@_ogrenci.DersAdi</td>
+                        <td>@_ogrenci.Not</td>
+                    </tr>
+                }
+             
+
+            </tbody>
+
+
+        </table>
+    </div>
+</body>
+</html>
